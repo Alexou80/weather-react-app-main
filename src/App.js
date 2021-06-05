@@ -100,7 +100,7 @@ function App() {
 
   useEffect(() => {
     getWeather();
-  }, );
+  },[] );
 
   const onSubmit = (e) => {
     e.preventDefault();
