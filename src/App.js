@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import axios from 'axios';
 
@@ -64,7 +64,7 @@ function App() {
   const [iconId, setIconId] = useState(null);
   const [forecasts, setForecasts] = useState([]);
 
-  const getWeather = () => {
+  const getWeather = useCallback(() => {
     axios
       .get(
         `${apiEndpoint}?q=${
@@ -96,11 +96,11 @@ function App() {
             .slice(0, 5)
         );
       });
-  };
+  }, [inputValue])
 
   useEffect(() => {
     getWeather();
-  },[getWeather] );
+  },[getWeather]);
 
   const onSubmit = (e) => {
     e.preventDefault();
