@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const apiEndpoint = 'https://api.openweathermap.org/data/2.5/weather';
 const apiEndpointForcast = 'https://api.openweathermap.org/data/2.5/onecall';
-const apiKey = '55d8a09c23dfa8d857d7646529e1b260';
+const apiKey ='d32942ce3e5448cad6bf259f26c876c4';
 const units = 'metric';
 
 function getDisplayDate() {
