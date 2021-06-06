@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import './App.css';
 import axios from 'axios';
 
@@ -98,9 +98,9 @@ function App() {
       });
   }, [inputValue])
 
-  useEffect(() => {
-    getWeather();
-  },[getWeather]);
+  
+    
+  
 
   const onSubmit = (e) => {
     e.preventDefault();
